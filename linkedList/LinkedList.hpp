@@ -31,7 +31,7 @@ int LinkedList<T>::size() const
 {
 	int length = 0;
 	Node<T>* temp1 = m_front;
-	if (temp1 -> getNext() == nullptr)
+	if (temp1 == nullptr)
 	{
 		return(length);
 	}
