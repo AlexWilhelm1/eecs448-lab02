@@ -52,11 +52,21 @@ bool LinkedList<T>::search(T value) const
 {
 	Node<T>* temp = m_front;
 	bool isFound = false;
+	bool keepGoing = true;
 
-	/** TODO 
-		Fix this method
-	*/
-
+	while (temp != nullptr)
+	{
+		if (temp -> getValue() != value)
+		{
+			temp = temp->getNext();
+		}
+		else
+		{
+			isFound = true;
+			keepGoing = false;
+			break;
+		}
+	}
 	return(isFound);
 }
 
